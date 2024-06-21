@@ -4,7 +4,7 @@ import { Github, Linkedin } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="#hero">
+    <section id="hero">
       <div className="container h-screen flex flex-col md:flex-row justify-evenly items-center py-8">
         <img className="rounded-full border-2 border-gray-800 w-80" src="https://avatars.githubusercontent.com/u/59585809?v=4" alt="felippe santana" />
         <div className="text-center">

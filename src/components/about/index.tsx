@@ -1,5 +1,51 @@
 import { Separator } from "@/components/ui/separator"
-import { Quote } from "lucide-react"
+import { Quote } from "lucide-react";
+import { FaDocker, FaLaravel, FaNodeJs, FaReact, FaVuejs } from "react-icons/fa6";
+import { RiNextjsFill } from "react-icons/ri";
+import { SiMongodb, SiPostgresql, SiTailwindcss, SiTypescript } from "react-icons/si";
+
+const skills = [
+  {
+    name: 'React JS',
+    icon: <FaReact color="#58C4DC" />
+  },
+  {
+    name: 'Next JS',
+    icon: <RiNextjsFill color="#000000" />
+  },
+  {
+    name: 'Vue JS',
+    icon: <FaVuejs color="#42D392" />
+  },
+  {
+    name: 'Node.js',
+    icon: <FaNodeJs color="#8BBF3D" />
+  },
+  {
+    name: 'Typescript JS',
+    icon: <SiTypescript color="#2F74C0" />
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: <SiTailwindcss color="#38BDF8" />
+  },
+  {
+    name: 'PostgreSQL',
+    icon: <SiPostgresql color="#31648C" />
+  },
+  {
+    name: 'MongoDB',
+    icon: <SiMongodb color="#00ED64" />
+  },
+  {
+    name: 'Laravel',
+    icon: <FaLaravel color="#F13B2F" />
+  },
+  {
+    name: 'Docker',
+    icon: <FaDocker color="#1D63ED" />
+  },
+];
 
 const About = () => {
   return (
@@ -23,19 +69,15 @@ const About = () => {
           </div>
           <Separator orientation="vertical" className="hidden md:block h-96 self-center" />
           <Separator className="md:hidden" />
-          <div className="basis-1/5">
-            <p className="font-medium text-center text-lg">Skills</p>
+          <div className="basis-1/5 text-lg">
+            <p className="font-medium text-center">Skills</p>
             <ul className="font-semibold">
-              <li>React JS</li>
-              <li>Next JS</li>
-              <li>Vue JS</li>
-              <li>Node JS</li>
-              <li>Typescript JS</li>
-              <li>Tailwind CSS</li>
-              <li>PostgreSQL</li>
-              <li>MongoDB</li>
-              <li>Laravel</li>
-              <li>Docker</li>
+              {skills.map(skill => (
+                <li className="flex items-center gap-2">
+                  {skill.icon}
+                  <span>{skill.name}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

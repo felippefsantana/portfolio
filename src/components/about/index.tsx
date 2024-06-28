@@ -1,5 +1,4 @@
 import { Separator } from "@/components/ui/separator"
-import { Quote } from "lucide-react";
 import { FaDocker, FaLaravel, FaNodeJs, FaReact, FaVuejs } from "react-icons/fa6";
 import { RiNextjsFill } from "react-icons/ri";
 import { SiMongodb, SiPostgresql, SiTailwindcss, SiTypescript } from "react-icons/si";
@@ -51,19 +50,22 @@ const About = () => {
   return (
     <section id="about">
       <div className="container py-16">
-        <div className="mb-8">
-          <h2 className="text-4xl text-center md:text-6xl md:text-start">Quem sou eu?</h2>
+        <div className="mb-3">
+          <span className="text-xl font-medium me-2">Sobre</span>
+          <span className="inline-block align-middle h-1 w-4 bg-black"></span>
         </div>
 
         <div className="flex flex-col flex-wrap md:flex-row justify-between items-stretch space-y-4 gap-4">
           <div className="basis-3/5">
-            <div className="text-lg md:text-2xl text-justify font-semibold">
-              <Quote className="rotate-180 inline align-baseline" width={54} height={48} />
-              <p className="inline indent-10">
-                Olá, me chamo Felippe Santana, tenho 21 anos e sou desenvolvedor fullstack. Iniciei minha jornada na área de tecnologia em 2018 ao ingressar numa escola profissionalizante no curso de técnico de informática, onde me interessei pelo desenvolvimento de software e por tudo que é possível fazer com ele.
+            <div className="mb-8">
+              <h2 className="text-2xl text-center font-medium md:text-3xl md:text-start">Oi, sou Felippe Santana.</h2>
+            </div>
+            <div className="text-lg text-justify">
+              <p className="indent-10">
+                Eu tenho 21 anos e sou desenvolvedor fullstack formado em Análise e Desenvolvimento de Sistemas. Iniciei minha jornada na área de tecnologia em 2018 ao ingressar numa escola profissionalizante no curso de técnico de informática, onde me interessei pelo desenvolvimento de software e por tudo que é possível fazer com ele.
               </p>
               <p className="indent-10 mt-5">
-                Atualmente sou desenvolvedor fullstack com mais de 3 anos de experiência profissional com desenvolvimento web. Possui conhecimentos em programação funcional, programação orientada a objetos (POO), linguagens de programação back end como Node JS e Laravel para aplicações escaláveis, além de sólidos conhecimentos em TypeScript, SQL e NoSQL databases, TDD e BDD, e proficiência em React JS/Next JS e Vue JS para desenvolvimento de interfaces de usuário.
+                Atualmente tenho mais de 3 anos de experiência profissional com desenvolvimento web. Possui conhecimentos em programação funcional, programação orientada a objetos (POO), linguagens de programação back end como Node JS e Laravel para aplicações escaláveis, além de sólidos conhecimentos em TypeScript, SQL e NoSQL databases, TDD e BDD, e proficiência em React JS/Next JS e Vue JS para desenvolvimento de interfaces de usuário.
               </p>
             </div>
           </div>

@@ -1,9 +1,7 @@
-import React, { RefObject, useEffect, useRef, useState } from "react";
+import React, { RefObject, useEffect, useRef } from "react";
 
-type ActiveMenu = 'hero' | 'about' | 'projects';
 
 export default function Header() {
-  const [activeMenu, setActiveMenu] = useState<ActiveMenu>('hero');
   const navRef = useRef<HTMLElement>(null);
   const sliderRef = useRef<HTMLSpanElement>(null);
   const navItemsRef: RefObject<HTMLLIElement>[] = [];
@@ -11,29 +9,26 @@ export default function Header() {
   let indexValue = 0;
   let leftPosition = 0;
 
-  function scrollToHeroSection() {
-    setActiveMenu('hero');
-    const section = document.getElementById('hero');
-    section?.scrollIntoView({
-      behavior: 'smooth'
-    });
-  }
+  // function scrollToHeroSection() {
+  //   const section = document.getElementById('hero');
+  //   section?.scrollIntoView({
+  //     behavior: 'smooth'
+  //   });
+  // }
 
-  function scrollToAboutSection() {
-    setActiveMenu('about');
-    const section = document.getElementById('about');
-    section?.scrollIntoView({
-      behavior: 'smooth'
-    });
-  }
+  // function scrollToAboutSection() {
+  //   const section = document.getElementById('about');
+  //   section?.scrollIntoView({
+  //     behavior: 'smooth'
+  //   });
+  // }
 
-  function scrollToProjectsSection() {
-    setActiveMenu('projects');
-    const section = document.getElementById('projects');
-    section?.scrollIntoView({
-      behavior: 'smooth'
-    });
-  }
+  // function scrollToProjectsSection() {
+  //   const section = document.getElementById('projects');
+  //   section?.scrollIntoView({
+  //     behavior: 'smooth'
+  //   });
+  // }
 
   useEffect(() => {
     if (navRef.current) {
@@ -66,31 +61,28 @@ export default function Header() {
       <nav className="px-1 py-1 rounded-full border backdrop-blur-sm bg-white/30 min-w-64" ref={navRef}>
         <ul className="flex justify-between gap-3 font-medium relative">
           <li className="flex-1 z-20">
-            <button
-              type="button"
-              className="w-full bg-transparent rounded-full px-4 py-1 hover:bg-slate-200 duration-150"
-              onClick={scrollToHeroSection}
+            <a
+              href="#hero"
+              className="block w-full bg-transparent rounded-full px-4 py-1 duration-150"
             >
               Início
-            </button>
+            </a>
           </li>
           <li className="flex-1 z-20">
-            <button
-              type="button"
-              className="w-full bg-transparent rounded-full px-4 py-1 hover:bg-slate-200 duration-150"
-              onClick={scrollToAboutSection}
+            <a
+              href="#about"
+              className="block w-full bg-transparent rounded-full px-4 py-1 duration-150"
             >
               Sobre
-            </button>
+            </a>
           </li>
           <li className="flex-1 z-20">
-            <button
-              type="button"
-              className="w-full bg-transparent rounded-full px-4 py-1 hover:bg-slate-200 duration-150"
-              onClick={scrollToProjectsSection}
+            <a
+              href="#projects"
+              className="block w-full bg-transparent rounded-full px-4 py-1 duration-150"
             >
               Projetos
-            </button>
+            </a>
           </li>
           <span className="slider absolute left-0 z-10 h-full bg-slate-300 rounded-full duration-300" ref={sliderRef}></span>
         </ul>

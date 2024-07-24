@@ -1,12 +1,16 @@
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin } from 'lucide-react';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const Hero = () => {
   return (
     <section id="hero">
       <div className="container h-screen flex flex-col md:flex-row justify-evenly items-center py-8">
-        <img className="rounded-full border-2 border-gray-800 w-80" src="https://avatars.githubusercontent.com/u/59585809?v=4" alt="felippe santana" />
+        <Avatar className="w-80 h-80 border-2 border-slate-100">
+          <AvatarImage src="https://github.com/felippefsantana.png" alt="felippe santana" />
+          <AvatarFallback>FS</AvatarFallback>
+        </Avatar>
         <div className="text-center">
           <h1 className="text-5xl mb-5">Felippe Santana</h1>
           <p className="text-2xl font-semibold mb-2">Software Developer</p>

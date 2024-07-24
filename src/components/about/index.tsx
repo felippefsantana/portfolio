@@ -72,10 +72,10 @@ const About = () => {
           <Separator orientation="vertical" className="hidden md:block h-96 self-center" />
           <Separator className="md:hidden" />
           <div className="basis-1/5 text-lg">
-            <p className="font-medium text-center">Skills</p>
+            <p className="font-medium text-center">Tecnologias</p>
             <ul className="font-semibold">
-              {skills.map(skill => (
-                <li className="flex items-center gap-2">
+              {skills.map((skill, i) => (
+                <li key={i} className="flex items-center gap-2">
                   {skill.icon}
                   <span>{skill.name}</span>
                 </li>
